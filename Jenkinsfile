@@ -19,7 +19,7 @@ pipeline {
 		stage ('apitest'){
 			steps {
 				dir('api-test'){
-					git credentialsId: 'f66d30ab-2ef6-4b63-bf74-90977aee3343', url: 'https://github.com/alanvoigt/api-test.git'
+					git 'https://github.com/alanvoigt/api-test.git'
 					bat 'mvn test'
 				}
 			}
